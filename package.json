@@ -1,0 +1,39 @@
+{
+  "name": "@phenax/pattern-lock-js",
+  "version": "0.1.0",
+  "description": "A pattern lock library for the web.",
+  "main": "index.js",
+  "repository": "https://github.com/phenax/pattern-lock-js.git",
+  "homepage": "https://phenax.github.io/pattern-lock-js",
+  "author": "Akshay Nair <phenax5@gmail.com>",
+  "scripts": {
+    "build": "concurrently 'npm run build:package' 'npm run build:example'",
+    "watch": "concurrently 'npm run watch:package' 'npm run watch:example'",
+    "build:package": "babel src -d build --copy-files",
+    "watch:package": "npm run build:package -- --watch",
+    "build:example": "webpack -p",
+    "watch:example": "webpack -w"
+  },
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-react": "^7.0.0-rc.1",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^8.0.0-beta.4",
+    "clipboard": "^2.0.1",
+    "concurrently": "^3.6.1",
+    "eslint": "^5.4.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "hyperapp": "^1.2.9",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {}
+}
